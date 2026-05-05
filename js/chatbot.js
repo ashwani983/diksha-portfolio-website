@@ -7,24 +7,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const messages = document.getElementById('chatbot-messages');
     const quickReplies = document.getElementById('chatbot-quick-replies');
     let qaData = [];
-    let isOpen = false;
 
     fetch('data/chatbot-qa.json').then(r => r.json()).then(data => { qaData = data; }).catch(() => {});
 
-    fab.addEventListener('click', () => {
-        isOpen = !isOpen;
-        win.hidden = !isOpen;
-        if (isOpen && messages.children.length === 0) {
+    function openChat() {
+        win.classList.add('active');
+        if (messages.children.length === 0) {
             addMsg('bot', "Hi! 👋 I'm Diksha's assistant. Ask me about services, experience, or availability!");
             showQuickReplies(['What services do you offer?', 'Years of experience?', 'Are you available?']);
         }
-        if (isOpen) input.focus();
+        input.focus();
+    }
+
+    function closeChat() {
+        win.classList.remove('active');
+    }
+
+    fab.addEventListener('click', () => {
+        if (win.classList.contains('active')) closeChat();
+        else openChat();
     });
 
     closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         e.stopPropagation();
-        isOpen = false;
-        win.hidden = true;
+        closeChat();
     });
 
     sendBtn.addEventListener('click', send);
@@ -60,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const STOP_WORDS = new Set(['what','is','are','do','you','your','the','a','an','how','can','i','me','my','to','for','of','and','in','on','it']);
 
-    function findAnswer(input) {
-        const tokens = input.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/).filter(t => !STOP_WORDS.has(t));
+    function findAnswer(text) {
+        const tokens = text.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/).filter(t => !STOP_WORDS.has(t));
         let best = null, bestScore = 0;
         for (const qa of qaData) {
             const score = tokens.filter(t => qa.keywords.some(k => k.includes(t) || t.includes(k))).length / Math.max(tokens.length, 1);
