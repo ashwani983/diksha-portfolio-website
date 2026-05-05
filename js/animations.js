@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll animations
     const animObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Skill bars
                 const fill = entry.target.querySelector('.skill-fill');
                 if (fill) fill.style.width = fill.dataset.level + '%';
                 animObserver.unobserve(entry.target);
@@ -12,9 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.2 });
 
-    document.querySelectorAll('.animate-on-scroll').forEach(el => animObserver.observe(el));
-
-    // Counter animation
     const counterObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -32,5 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.5 });
 
-    document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+    function observeAll() {
+        document.querySelectorAll('.animate-on-scroll:not(.observed)').forEach(el => {
+            el.classList.add('observed');
+            animObserver.observe(el);
+        });
+        document.querySelectorAll('.stat-number:not(.observed)').forEach(el => {
+            el.classList.add('observed');
+            counterObserver.observe(el);
+        });
+    }
+
+    observeAll();
+
+    // Watch for dynamically added elements
+    new MutationObserver(observeAll).observe(document.body, { childList: true, subtree: true });
 });
