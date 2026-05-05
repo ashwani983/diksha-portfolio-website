@@ -1,25 +1,18 @@
-// Theme toggle — runs first to prevent flash
 (function() {
     const saved = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', saved);
+    if (saved === 'dark') document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('theme-toggle');
-    const icon = toggle.querySelector('.theme-icon');
-
-    function updateIcon() {
-        const theme = document.documentElement.getAttribute('data-theme');
-        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-    }
-
     toggle.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme');
-        const next = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-        updateIcon();
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        document.body.classList.toggle('bg-dev-bg', isDark);
+        document.body.classList.toggle('bg-white', !isDark);
+        document.body.classList.toggle('text-gray-200', isDark);
+        document.body.classList.toggle('text-gray-800', !isDark);
     });
-
-    updateIcon();
 });

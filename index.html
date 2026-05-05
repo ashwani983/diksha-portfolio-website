@@ -1,360 +1,323 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diksha Gupta — Sr. Software Developer | Zoho Expert</title>
     <meta name="description" content="Portfolio of Diksha Gupta, Senior Zoho Developer with 4+ years experience in CRM, Creator, Books, API integrations and workflow automation.">
-    <meta property="og:title" content="Diksha Gupta — Sr. Software Developer">
-    <meta property="og:description" content="Senior Zoho Developer specializing in CRM, Creator, Books, API integrations and workflow automation.">
-    <meta property="og:type" content="website">
     <link rel="icon" type="image/jpeg" href="assets/images/1754032142287.jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dev: { bg: '#0a0f1a', card: '#111827', border: '#1e293b', accent: '#22d3ee', green: '#4ade80', purple: '#a78bfa' }
+                    },
+                    fontFamily: { mono: ['JetBrains Mono', 'Fira Code', 'monospace'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Diksha Gupta",
-        "jobTitle": "Sr. Software Developer",
-        "address": {"@type": "PostalAddress", "addressLocality": "Bangalore", "addressRegion": "Karnataka"},
-        "email": "diku.gupta269@gmail.com",
-        "telephone": "+916201475562"
-    }
+    {"@context":"https://schema.org","@type":"Person","name":"Diksha Gupta","jobTitle":"Sr. Software Developer","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressRegion":"Karnataka"},"email":"diku.gupta269@gmail.com","telephone":"+916201475562"}
     </script>
 </head>
-<body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+<body class="bg-dev-bg text-gray-200 font-sans">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-dev-accent text-black px-4 py-2 rounded z-50">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">DG</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#freelance" class="nav-link">Freelance</a></li>
-                <li><a href="#connect" class="nav-link">Connect</a></li>
+    <!-- Navbar -->
+    <nav class="fixed top-0 inset-x-0 z-50 bg-dev-bg/90 backdrop-blur border-b border-dev-border" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+            <a href="#hero" class="font-mono font-bold text-dev-accent text-lg">&lt;DG/&gt;</a>
+            <ul class="hidden md:flex gap-6 text-sm" id="nav-links">
+                <li><a href="#hero" class="nav-link text-gray-400 hover:text-dev-accent transition">Home</a></li>
+                <li><a href="#experience" class="nav-link text-gray-400 hover:text-dev-accent transition">Experience</a></li>
+                <li><a href="#skills" class="nav-link text-gray-400 hover:text-dev-accent transition">Skills</a></li>
+                <li><a href="#projects" class="nav-link text-gray-400 hover:text-dev-accent transition">Projects</a></li>
+                <li><a href="#blog" class="nav-link text-gray-400 hover:text-dev-accent transition">Blog</a></li>
+                <li><a href="#freelance" class="nav-link text-gray-400 hover:text-dev-accent transition">Freelance</a></li>
+                <li><a href="#connect" class="nav-link text-gray-400 hover:text-dev-accent transition">Connect</a></li>
             </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded hover:bg-dev-card transition"><i data-lucide="moon" class="w-5 h-5"></i></button>
+                <button id="hamburger" aria-label="Menu" class="md:hidden p-2"><i data-lucide="menu" class="w-5 h-5"></i></button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-dev-border bg-dev-bg px-4 pb-4">
+            <ul class="flex flex-col gap-3 pt-3 text-sm">
+                <li><a href="#hero" class="mobile-link text-gray-400 hover:text-dev-accent">Home</a></li>
+                <li><a href="#experience" class="mobile-link text-gray-400 hover:text-dev-accent">Experience</a></li>
+                <li><a href="#skills" class="mobile-link text-gray-400 hover:text-dev-accent">Skills</a></li>
+                <li><a href="#projects" class="mobile-link text-gray-400 hover:text-dev-accent">Projects</a></li>
+                <li><a href="#blog" class="mobile-link text-gray-400 hover:text-dev-accent">Blog</a></li>
+                <li><a href="#freelance" class="mobile-link text-gray-400 hover:text-dev-accent">Freelance</a></li>
+                <li><a href="#connect" class="mobile-link text-gray-400 hover:text-dev-accent">Connect</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <img src="assets/images/1754032142287.jpeg" alt="Diksha Gupta" class="hero-photo">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Diksha Gupta</h1>
-                <h2 class="hero-title">Sr. Software Developer</h2>
-                <p class="hero-typing" id="typing-text"></p>
-                <p class="hero-location">📍 Bangalore, Karnataka</p>
-                <p class="hero-objective">Experienced Senior Zoho Developer with 4+ years delivering scalable CRM, Creator, and Books solutions across B2B/B2C clients in manufacturing, finance, logistics, healthcare, travel and real estate.</p>
-                <div class="hero-cta">
-                    <a href="assets/resume/Sr.ZohoDeveloper-DikshaGupta..pdf" class="btn btn-primary" download>Download Resume</a>
-                    <a href="#connect" class="btn btn-secondary">Contact Me</a>
+    <main id="main-content" class="max-w-6xl mx-auto px-4">
+
+        <!-- Hero -->
+        <section class="min-h-screen flex items-center pt-14" id="hero">
+            <div class="grid md:grid-cols-2 gap-8 items-center w-full">
+                <div class="text-left">
+                    <p class="font-mono text-dev-green text-sm mb-2">// Hello, I'm</p>
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Diksha Gupta</h1>
+                    <h2 class="text-xl md:text-2xl font-semibold text-dev-accent mb-3">Sr. Software Developer</h2>
+                    <p class="font-mono text-dev-purple text-sm h-6 mb-3" id="typing-text"></p>
+                    <p class="flex items-center gap-2 text-gray-400 text-sm mb-4"><i data-lucide="map-pin" class="w-4 h-4"></i>Bangalore, Karnataka</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-lg">Experienced Senior Zoho Developer with 4+ years delivering scalable CRM, Creator, and Books solutions across B2B/B2C clients in manufacturing, finance, logistics, healthcare, travel and real estate.</p>
+                    <div class="flex gap-3 flex-wrap">
+                        <a href="assets/resume/Sr.ZohoDeveloper-DikshaGupta..pdf" download class="inline-flex items-center gap-2 bg-dev-accent text-black px-5 py-2.5 rounded font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="download" class="w-4 h-4"></i>Resume</a>
+                        <a href="#connect" class="inline-flex items-center gap-2 border border-dev-accent text-dev-accent px-5 py-2.5 rounded font-semibold text-sm hover:bg-dev-accent/10 transition"><i data-lucide="send" class="w-4 h-4"></i>Contact Me</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <img src="assets/images/1754032142287.jpeg" alt="Diksha Gupta" class="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-2 border-dev-accent/30 shadow-lg shadow-dev-accent/10">
                 </div>
             </div>
         </section>
 
-        <!-- Experience Timeline -->
-        <section class="section" id="experience">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Dec 2024 — Present</span>
-                            <h3>Sr. Zoho Developer</h3>
-                            <h4>Wisethink Information Solutions (Zoho Premium Partner)</h4>
-                            <ul>
-                                <li>Led Zoho One implementation for 100+ users, optimizing operations and automating workflows</li>
-                                <li>Integrated Zoho with external applications using APIs, streamlining lead capture and tracking</li>
-                                <li>Provided user training, support, and ongoing system optimization</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Feb 2024 — Dec 2024</span>
-                            <h3>Sr. Zoho Developer</h3>
-                            <h4>EKI Energy Services Limited, Indore</h4>
-                            <ul>
-                                <li>Led Zoho One implementation for 300+ users, optimizing operations and automating workflows</li>
-                                <li>Developed custom Zoho applications to address business needs</li>
-                                <li>Integrated Zoho with third-party applications ensuring seamless data synchronization</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item animate-on-scroll">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <span class="timeline-date">Nov 2021 — Feb 2024</span>
-                            <h3>Zoho Developer</h3>
-                            <h4>CRM Masters Infotech LLP, Gurgaon (Zoho Premium Partner)</h4>
-                            <ul>
-                                <li>Implemented Zoho One across 30–40 projects in healthcare, education, and IT sectors</li>
-                                <li>Managed end-to-end project execution ensuring timely and cost-effective results</li>
-                                <li>Provided post-implementation support, troubleshooting, and user training</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- Experience -->
+        <section class="py-16" id="experience">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-8"><i data-lucide="briefcase" class="w-6 h-6 text-dev-accent"></i>Experience</h2>
+            <div class="space-y-6">
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 animate-on-scroll">
+                    <div class="flex items-center gap-2 text-dev-green font-mono text-xs mb-2"><i data-lucide="calendar" class="w-3.5 h-3.5"></i>Dec 2024 — Present</div>
+                    <h3 class="text-lg font-semibold text-white">Sr. Zoho Developer</h3>
+                    <p class="text-gray-400 text-sm mb-3">Wisethink Information Solutions (Zoho Premium Partner)</p>
+                    <ul class="space-y-1.5 text-sm text-gray-400">
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Led Zoho One implementation for 100+ users, optimizing operations and automating workflows</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Integrated Zoho with external applications using APIs, streamlining lead capture</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Provided user training, support, and ongoing system optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 animate-on-scroll">
+                    <div class="flex items-center gap-2 text-dev-green font-mono text-xs mb-2"><i data-lucide="calendar" class="w-3.5 h-3.5"></i>Feb 2024 — Dec 2024</div>
+                    <h3 class="text-lg font-semibold text-white">Sr. Zoho Developer</h3>
+                    <p class="text-gray-400 text-sm mb-3">EKI Energy Services Limited, Indore</p>
+                    <ul class="space-y-1.5 text-sm text-gray-400">
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Led Zoho One implementation for 300+ users</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Developed custom Zoho applications to address business needs</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Integrated Zoho with third-party applications ensuring seamless data sync</li>
+                    </ul>
+                </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 animate-on-scroll">
+                    <div class="flex items-center gap-2 text-dev-green font-mono text-xs mb-2"><i data-lucide="calendar" class="w-3.5 h-3.5"></i>Nov 2021 — Feb 2024</div>
+                    <h3 class="text-lg font-semibold text-white">Zoho Developer</h3>
+                    <p class="text-gray-400 text-sm mb-3">CRM Masters Infotech LLP, Gurgaon (Zoho Premium Partner)</p>
+                    <ul class="space-y-1.5 text-sm text-gray-400">
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Implemented Zoho One across 30–40 projects in healthcare, education, and IT</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Managed end-to-end project execution ensuring timely results</li>
+                        <li class="flex gap-2"><i data-lucide="chevron-right" class="w-4 h-4 text-dev-accent shrink-0 mt-0.5"></i>Provided post-implementation support and user training</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="section section-alt" id="skills">
-            <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-tabs">
-                    <button class="tab-btn active" data-tab="zoho">Zoho Apps</button>
-                    <button class="tab-btn" data-tab="dev">Development</button>
-                    <button class="tab-btn" data-tab="tools">Tools & Others</button>
+        <!-- Skills -->
+        <section class="py-16" id="skills">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="code-2" class="w-6 h-6 text-dev-accent"></i>Skills</h2>
+            <div class="flex gap-2 mb-6 flex-wrap">
+                <button class="tab-btn active font-mono text-xs px-3 py-1.5 rounded border border-dev-border bg-dev-accent text-black" data-tab="zoho">Zoho Apps</button>
+                <button class="tab-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 hover:text-dev-accent" data-tab="dev">Development</button>
+                <button class="tab-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 hover:text-dev-accent" data-tab="tools">Tools</button>
+            </div>
+            <div id="skills-grid">
+                <div class="skills-panel active grid grid-cols-1 sm:grid-cols-2 gap-3" data-panel="zoho">
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho CRM</span><span class="text-dev-accent font-mono">90%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="90"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho Creator</span><span class="text-dev-accent font-mono">92%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="92"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho Books</span><span class="text-dev-accent font-mono">85%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="85"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho Analytics</span><span class="text-dev-accent font-mono">78%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="78"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho Flow</span><span class="text-dev-accent font-mono">82%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="82"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho People/Payroll</span><span class="text-dev-accent font-mono">75%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="75"></div></div></div>
                 </div>
-                <div class="skills-grid" id="skills-grid">
-                    <div class="skills-panel active" data-panel="zoho">
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho CRM</span><div class="skill-bar"><div class="skill-fill" data-level="90"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Creator</span><div class="skill-bar"><div class="skill-fill" data-level="92"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Books</span><div class="skill-bar"><div class="skill-fill" data-level="85"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Projects</span><div class="skill-bar"><div class="skill-fill" data-level="80"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Analytics</span><div class="skill-bar"><div class="skill-fill" data-level="78"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho People/Payroll/Recruit</span><div class="skill-bar"><div class="skill-fill" data-level="75"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Flow</span><div class="skill-bar"><div class="skill-fill" data-level="82"></div></div></div>
-                    </div>
-                    <div class="skills-panel" data-panel="dev">
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Deluge Scripting</span><div class="skill-bar"><div class="skill-fill" data-level="95"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">API Integration</span><div class="skill-bar"><div class="skill-fill" data-level="90"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Client Script</span><div class="skill-bar"><div class="skill-fill" data-level="85"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Widgets</span><div class="skill-bar"><div class="skill-fill" data-level="80"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">HTML & CSS</span><div class="skill-bar"><div class="skill-fill" data-level="75"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Python (Basic)</span><div class="skill-bar"><div class="skill-fill" data-level="55"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Core Java</span><div class="skill-bar"><div class="skill-fill" data-level="50"></div></div></div>
-                    </div>
-                    <div class="skills-panel" data-panel="tools">
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Postman</span><div class="skill-bar"><div class="skill-fill" data-level="85"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Linux OS</span><div class="skill-bar"><div class="skill-fill" data-level="70"></div></div></div>
-                        <div class="skill-card animate-on-scroll"><span class="skill-name">Zoho Mail/Cliq/Meeting</span><div class="skill-bar"><div class="skill-fill" data-level="88"></div></div></div>
-                    </div>
+                <div class="skills-panel hidden grid grid-cols-1 sm:grid-cols-2 gap-3" data-panel="dev">
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Deluge Scripting</span><span class="text-dev-accent font-mono">95%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="95"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">API Integration</span><span class="text-dev-accent font-mono">90%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="90"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Client Script</span><span class="text-dev-accent font-mono">85%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="85"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Widgets</span><span class="text-dev-accent font-mono">80%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="80"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">HTML & CSS</span><span class="text-dev-accent font-mono">75%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="75"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Python</span><span class="text-dev-accent font-mono">55%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="55"></div></div></div>
+                </div>
+                <div class="skills-panel hidden grid grid-cols-1 sm:grid-cols-2 gap-3" data-panel="tools">
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Postman</span><span class="text-dev-accent font-mono">85%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="85"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Linux OS</span><span class="text-dev-accent font-mono">70%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="70"></div></div></div>
+                    <div class="skill-card bg-dev-card border border-dev-border rounded-lg p-4 animate-on-scroll"><div class="flex justify-between text-sm mb-2"><span class="text-gray-200">Zoho Mail/Cliq</span><span class="text-dev-accent font-mono">88%</span></div><div class="h-1.5 bg-dev-border rounded"><div class="skill-fill h-full bg-gradient-to-r from-dev-accent to-dev-purple rounded" data-level="88"></div></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section class="section" id="projects">
-            <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="filter-tabs" id="project-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="crm">CRM</button>
-                    <button class="filter-btn" data-filter="creator">Creator</button>
-                    <button class="filter-btn" data-filter="books">Books</button>
-                    <button class="filter-btn" data-filter="integration">Integration</button>
-                </div>
-                <div class="projects-grid" id="projects-grid"></div>
+        <!-- Projects -->
+        <section class="py-16" id="projects">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="folder-git-2" class="w-6 h-6 text-dev-accent"></i>Projects</h2>
+            <div class="flex gap-2 mb-6 flex-wrap" id="project-filters">
+                <button class="filter-btn active font-mono text-xs px-3 py-1.5 rounded border border-dev-border bg-dev-accent text-black" data-filter="all">All</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="crm">CRM</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="creator">Creator</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="books">Books</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="integration">Integration</button>
             </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="projects-grid"></div>
         </section>
 
         <!-- Certifications -->
-        <section class="section section-alt" id="certifications">
-            <div class="container">
-                <h2 class="section-title">Certifications</h2>
-                <div class="cert-grid">
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">🛡️</div>
-                        <h3>Cyber Security</h3>
-                        <p>Cyber Shiksha — NIELIT</p>
-                        <span class="cert-detail">Microsoft & DSCI sponsored training program</span>
-                    </div>
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">📊</div>
-                        <h3>Data Science</h3>
-                        <p>360DigiTMG, Hyderabad</p>
-                        <span class="cert-detail">Certified in Data Science</span>
-                    </div>
-                    <div class="cert-card animate-on-scroll">
-                        <div class="cert-icon">💻</div>
-                        <h3>CIT — Information Technology</h3>
-                        <p>NOU (Nalanda Open University)</p>
-                        <span class="cert-detail">Certificate in Information Technology</span>
-                    </div>
+        <section class="py-16" id="certifications">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="award" class="w-6 h-6 text-dev-accent"></i>Certifications</h2>
+            <div class="grid sm:grid-cols-3 gap-4">
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll">
+                    <i data-lucide="shield-check" class="w-10 h-10 text-dev-green mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm">Cyber Security</h3>
+                    <p class="text-gray-400 text-xs mt-1">NIELIT — Microsoft & DSCI</p>
+                </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll">
+                    <i data-lucide="bar-chart-3" class="w-10 h-10 text-dev-purple mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm">Data Science</h3>
+                    <p class="text-gray-400 text-xs mt-1">360DigiTMG, Hyderabad</p>
+                </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll">
+                    <i data-lucide="monitor" class="w-10 h-10 text-dev-accent mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm">CIT — Information Technology</h3>
+                    <p class="text-gray-400 text-xs mt-1">Nalanda Open University</p>
                 </div>
             </div>
         </section>
 
         <!-- Achievements -->
-        <section class="section" id="achievements">
-            <div class="container">
-                <h2 class="section-title">Achievements</h2>
-                <div class="achievement-highlight animate-on-scroll">
-                    <span class="achievement-icon">⭐</span>
-                    <h3>Star of the Month</h3>
-                    <p>Awarded at CRM Masters InfoTech LLP within the first month of joining, demonstrating exceptional performance and dedication.</p>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card animate-on-scroll"><span class="stat-number" data-count="300">0</span><span class="stat-label">Users Served</span></div>
-                    <div class="stat-card animate-on-scroll"><span class="stat-number" data-count="40">0</span><span class="stat-label">Projects Delivered</span></div>
-                    <div class="stat-card animate-on-scroll"><span class="stat-number" data-count="4">0</span><span class="stat-label">Years Experience</span></div>
-                    <div class="stat-card animate-on-scroll"><span class="stat-number" data-count="6">0</span><span class="stat-label">Industries Served</span></div>
-                </div>
+        <section class="py-16" id="achievements">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="trophy" class="w-6 h-6 text-dev-accent"></i>Achievements</h2>
+            <div class="bg-dev-card border border-dev-accent/20 rounded-lg p-6 mb-6 text-center animate-on-scroll">
+                <i data-lucide="star" class="w-10 h-10 text-yellow-400 mx-auto mb-2"></i>
+                <h3 class="text-lg font-semibold text-dev-accent">Star of the Month</h3>
+                <p class="text-gray-400 text-sm mt-1">Awarded at CRM Masters InfoTech LLP within the first month of joining.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-dev-card border border-dev-border rounded-lg p-4 text-center animate-on-scroll"><span class="stat-number text-2xl font-bold text-dev-accent font-mono" data-count="300">0</span><span class="text-xs text-gray-400 block mt-1">Users Served</span></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-4 text-center animate-on-scroll"><span class="stat-number text-2xl font-bold text-dev-green font-mono" data-count="40">0</span><span class="text-xs text-gray-400 block mt-1">Projects</span></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-4 text-center animate-on-scroll"><span class="stat-number text-2xl font-bold text-dev-purple font-mono" data-count="4">0</span><span class="text-xs text-gray-400 block mt-1">Years Exp</span></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-4 text-center animate-on-scroll"><span class="stat-number text-2xl font-bold text-dev-accent font-mono" data-count="6">0</span><span class="text-xs text-gray-400 block mt-1">Industries</span></div>
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section class="section section-alt" id="blog">
-            <div class="container">
-                <h2 class="section-title">Blog</h2>
-                <div class="blog-tags" id="blog-tags"></div>
-                <div class="blog-grid" id="blog-grid"></div>
-                <div class="blog-post-view" id="blog-post-view" hidden>
-                    <button class="btn btn-secondary blog-back" id="blog-back">← Back to Posts</button>
-                    <article class="blog-article" id="blog-article"></article>
-                </div>
+        <!-- Blog -->
+        <section class="py-16" id="blog">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="pen-tool" class="w-6 h-6 text-dev-accent"></i>Blog</h2>
+            <div class="flex gap-2 mb-4 flex-wrap" id="blog-tags"></div>
+            <div class="grid sm:grid-cols-2 gap-4" id="blog-grid"></div>
+            <div id="blog-post-view" hidden>
+                <button class="inline-flex items-center gap-1 text-dev-accent text-sm mb-4 hover:underline" id="blog-back"><i data-lucide="arrow-left" class="w-4 h-4"></i>Back</button>
+                <article class="prose prose-invert max-w-none" id="blog-article"></article>
             </div>
         </section>
 
-        <!-- Freelance Section -->
-        <section class="section" id="freelance">
-            <div class="container">
-                <h2 class="section-title">Freelance Services</h2>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <span class="service-icon">🔧</span>
-                        <h3>Zoho CRM Setup</h3>
-                        <p>Complete CRM configuration, customization, and deployment tailored to your business.</p>
-                        <a href="#connect" class="btn btn-outline">Get a Quote</a>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <span class="service-icon">🔗</span>
-                        <h3>API Integration</h3>
-                        <p>Connect Zoho with third-party apps — payment gateways, ERPs, marketing tools.</p>
-                        <a href="#connect" class="btn btn-outline">Get a Quote</a>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <span class="service-icon">⚙️</span>
-                        <h3>Workflow Automation</h3>
-                        <p>Automate repetitive tasks with Deluge scripts, blueprints, and scheduled workflows.</p>
-                        <a href="#connect" class="btn btn-outline">Get a Quote</a>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <span class="service-icon">📚</span>
-                        <h3>Training & Support</h3>
-                        <p>User training, documentation, and ongoing support for your Zoho ecosystem.</p>
-                        <a href="#connect" class="btn btn-outline">Get a Quote</a>
-                    </div>
+        <!-- Freelance -->
+        <section class="py-16" id="freelance">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="rocket" class="w-6 h-6 text-dev-accent"></i>Freelance Services</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll hover:border-dev-accent/40 transition">
+                    <i data-lucide="settings" class="w-8 h-8 text-dev-accent mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm mb-2">Zoho CRM Setup</h3>
+                    <p class="text-gray-400 text-xs">Complete configuration & deployment</p>
                 </div>
-                <div class="industries-served">
-                    <h3>Industries Served</h3>
-                    <div class="industry-badges">
-                        <span class="badge">🏭 Manufacturing</span>
-                        <span class="badge">💰 Finance</span>
-                        <span class="badge">🏥 Healthcare</span>
-                        <span class="badge">🚚 Logistics</span>
-                        <span class="badge">🏠 Real Estate</span>
-                        <span class="badge">✈️ Travel</span>
-                    </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll hover:border-dev-accent/40 transition">
+                    <i data-lucide="plug" class="w-8 h-8 text-dev-green mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm mb-2">API Integration</h3>
+                    <p class="text-gray-400 text-xs">Connect with third-party services</p>
                 </div>
-                <div class="testimonials" id="testimonials">
-                    <h3>What Clients Say</h3>
-                    <div class="testimonial-carousel" id="testimonial-carousel"></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll hover:border-dev-accent/40 transition">
+                    <i data-lucide="workflow" class="w-8 h-8 text-dev-purple mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm mb-2">Workflow Automation</h3>
+                    <p class="text-gray-400 text-xs">Deluge scripts & blueprints</p>
                 </div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center animate-on-scroll hover:border-dev-accent/40 transition">
+                    <i data-lucide="graduation-cap" class="w-8 h-8 text-yellow-400 mx-auto mb-3"></i>
+                    <h3 class="font-semibold text-white text-sm mb-2">Training & Support</h3>
+                    <p class="text-gray-400 text-xs">User training & documentation</p>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-sm font-semibold text-gray-300 mb-3">Industries Served</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">🏭 Manufacturing</span>
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">💰 Finance</span>
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">🏥 Healthcare</span>
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">🚚 Logistics</span>
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">🏠 Real Estate</span>
+                    <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">✈️ Travel</span>
+                </div>
+            </div>
+            <div id="testimonials">
+                <h3 class="text-sm font-semibold text-gray-300 mb-3">What Clients Say</h3>
+                <div id="testimonial-carousel" class="max-w-lg"></div>
             </div>
         </section>
 
-        <!-- Connect / Contact -->
-        <section class="section section-alt" id="connect">
-            <div class="container">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="connect-grid">
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xpzvqrwl" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required>
-                            <span class="form-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <span class="form-error"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <p class="form-status" id="form-status"></p>
-                    </form>
-                    <div class="contact-info">
-                        <div class="contact-item"><span>📧</span><a href="mailto:diku.gupta269@gmail.com">diku.gupta269@gmail.com</a></div>
-                        <div class="contact-item"><span>📱</span><a href="tel:+916201475562">+91 6201475562</a></div>
-                        <div class="contact-item"><span>📍</span><p>Bangalore, Karnataka, India</p></div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/diksha-gupta-4609b6148/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                            <a href="https://github.com/diksha-gupta" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-                        </div>
+        <!-- Connect -->
+        <section class="py-16" id="connect">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="mail" class="w-6 h-6 text-dev-accent"></i>Let's Connect</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <form class="space-y-4" id="contact-form" action="https://formspree.io/f/xpzvqrwl" method="POST">
+                    <div><label class="text-xs text-gray-400 block mb-1" for="name">Name *</label><input type="text" id="name" name="name" required class="w-full bg-dev-card border border-dev-border rounded px-3 py-2 text-sm text-gray-200 focus:border-dev-accent focus:outline-none"><span class="form-error text-xs text-red-400"></span></div>
+                    <div><label class="text-xs text-gray-400 block mb-1" for="email">Email *</label><input type="email" id="email" name="email" required class="w-full bg-dev-card border border-dev-border rounded px-3 py-2 text-sm text-gray-200 focus:border-dev-accent focus:outline-none"><span class="form-error text-xs text-red-400"></span></div>
+                    <div><label class="text-xs text-gray-400 block mb-1" for="subject">Subject *</label><input type="text" id="subject" name="subject" required class="w-full bg-dev-card border border-dev-border rounded px-3 py-2 text-sm text-gray-200 focus:border-dev-accent focus:outline-none"><span class="form-error text-xs text-red-400"></span></div>
+                    <div><label class="text-xs text-gray-400 block mb-1" for="message">Message *</label><textarea id="message" name="message" rows="4" required class="w-full bg-dev-card border border-dev-border rounded px-3 py-2 text-sm text-gray-200 focus:border-dev-accent focus:outline-none resize-none"></textarea><span class="form-error text-xs text-red-400"></span></div>
+                    <button type="submit" class="inline-flex items-center gap-2 bg-dev-accent text-black px-5 py-2.5 rounded font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="send" class="w-4 h-4"></i>Send Message</button>
+                    <p class="form-status text-sm" id="form-status"></p>
+                </form>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 text-sm"><i data-lucide="mail" class="w-5 h-5 text-dev-accent"></i><a href="mailto:diku.gupta269@gmail.com" class="text-gray-400 hover:text-dev-accent">diku.gupta269@gmail.com</a></div>
+                    <div class="flex items-center gap-3 text-sm"><i data-lucide="phone" class="w-5 h-5 text-dev-accent"></i><a href="tel:+916201475562" class="text-gray-400 hover:text-dev-accent">+91 6201475562</a></div>
+                    <div class="flex items-center gap-3 text-sm"><i data-lucide="map-pin" class="w-5 h-5 text-dev-accent"></i><span class="text-gray-400">Bangalore, Karnataka, India</span></div>
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.linkedin.com/in/diksha-gupta-4609b6148/" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm border border-dev-border rounded px-3 py-2 text-gray-400 hover:border-dev-accent hover:text-dev-accent transition"><i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn</a>
+                        <a href="https://github.com/diksha-gupta" target="_blank" rel="noopener" class="flex items-center gap-2 text-sm border border-dev-border rounded px-3 py-2 text-gray-400 hover:border-dev-accent hover:text-dev-accent transition"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Education -->
-        <section class="section" id="education">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="edu-card animate-on-scroll">
-                    <h3>Bachelor of Technology — Computer Science & Engineering</h3>
-                    <p>MACET — Magadh University</p>
-                </div>
+        <section class="py-16" id="education">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="graduation-cap" class="w-6 h-6 text-dev-accent"></i>Education</h2>
+            <div class="bg-dev-card border border-dev-border rounded-lg p-5 max-w-md animate-on-scroll">
+                <h3 class="font-semibold text-white">B.Tech — Computer Science & Engineering</h3>
+                <p class="text-gray-400 text-sm mt-1">MACET — Magadh University</p>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Diksha Gupta. All rights reserved.</p>
+    <footer class="border-t border-dev-border text-center py-6 text-xs text-gray-500">
+        <p>&copy; 2024 Diksha Gupta. Built with <span class="text-dev-accent">&lt;/&gt;</span></p>
     </footer>
 
     <!-- Chatbot -->
-    <div class="chatbot-fab" id="chatbot-fab" aria-label="Open chat">💬</div>
-    <div class="chatbot-window" id="chatbot-window" role="dialog" aria-label="Chat with Diksha">
-        <div class="chatbot-header">
-            <span>🤖 Ask Diksha</span>
-            <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">✕</button>
+    <div class="chatbot-fab fixed bottom-6 right-6 w-12 h-12 rounded-full bg-dev-accent text-black flex items-center justify-center cursor-pointer shadow-lg shadow-dev-accent/20 z-50 hover:scale-110 transition" id="chatbot-fab" aria-label="Open chat"><i data-lucide="message-circle" class="w-6 h-6"></i></div>
+    <div class="chatbot-window fixed bottom-20 right-6 w-80 h-[420px] bg-dev-bg border border-dev-border rounded-xl flex-col z-50 shadow-xl overflow-hidden" id="chatbot-window" role="dialog" aria-label="Chat with Diksha">
+        <div class="flex items-center justify-between px-4 py-3 bg-dev-card border-b border-dev-border">
+            <span class="font-mono text-sm text-dev-accent">🤖 Ask Diksha</span>
+            <button class="chatbot-close p-2 text-gray-400 hover:text-white" id="chatbot-close" aria-label="Close chat"><i data-lucide="x" class="w-5 h-5"></i></button>
         </div>
-        <div class="chatbot-messages" id="chatbot-messages"></div>
-        <div class="chatbot-quick-replies" id="chatbot-quick-replies"></div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbot-input" placeholder="Type a message..." aria-label="Chat message">
-            <button id="chatbot-send" aria-label="Send message">➤</button>
+        <div class="flex-1 overflow-y-auto p-3 space-y-2" id="chatbot-messages"></div>
+        <div class="px-3 pb-2 flex flex-wrap gap-1" id="chatbot-quick-replies"></div>
+        <div class="flex gap-2 p-3 border-t border-dev-border">
+            <input type="text" id="chatbot-input" placeholder="Type a message..." class="flex-1 bg-dev-card border border-dev-border rounded px-3 py-2 text-sm text-gray-200 focus:border-dev-accent focus:outline-none" aria-label="Chat message">
+            <button id="chatbot-send" class="bg-dev-accent text-black px-3 py-2 rounded text-sm font-semibold" aria-label="Send">➤</button>
         </div>
     </div>
 
     <!-- Project Modal -->
-    <div class="modal-overlay" id="project-modal">
-        <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Close modal">✕</button>
+    <div class="modal-overlay fixed inset-0 bg-black/70 z-[2000] items-center justify-center p-4" id="project-modal">
+        <div class="bg-dev-bg border border-dev-border rounded-xl p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto relative">
+            <button class="absolute top-4 right-4 text-gray-400 hover:text-white" id="modal-close" aria-label="Close"><i data-lucide="x" class="w-5 h-5"></i></button>
             <div id="modal-body"></div>
         </div>
     </div>
@@ -365,5 +328,6 @@
     <script src="js/projects.js" defer></script>
     <script src="js/blog.js" defer></script>
     <script src="js/chatbot.js" defer></script>
+    <script>document.addEventListener('DOMContentLoaded', () => lucide.createIcons());</script>
 </body>
 </html>
