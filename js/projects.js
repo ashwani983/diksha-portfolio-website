@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3>Highlights</h3>
             <ul>${p.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
         `;
-        modal.hidden = false;
+        modal.classList.add('active');
     }
-    document.getElementById('modal-close').addEventListener('click', () => modal.hidden = true);
-    modal.addEventListener('click', e => { if (e.target === modal) modal.hidden = true; });
+    document.getElementById('modal-close').addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('active'); });
 });
