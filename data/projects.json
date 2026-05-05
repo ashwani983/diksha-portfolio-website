@@ -1,0 +1,100 @@
+[
+    {
+        "id": "1",
+        "title": "Zoho One Implementation — 300+ Users",
+        "description": "Complete Zoho One suite deployment for a large energy services company, automating operations across departments.",
+        "category": "crm",
+        "industry": "Energy & Finance",
+        "techStack": ["Zoho CRM", "Zoho People", "Deluge", "API Integration"],
+        "highlights": [
+            "Deployed Zoho One for 300+ users across multiple departments",
+            "Automated lead-to-deal pipeline reducing manual work by 60%",
+            "Integrated with third-party ERP for seamless data sync",
+            "Trained 50+ users on CRM best practices"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Healthcare CRM & Patient Management",
+        "description": "Custom Zoho CRM solution for a healthcare provider to manage patient records, appointments, and follow-ups.",
+        "category": "crm",
+        "industry": "Healthcare",
+        "techStack": ["Zoho CRM", "Zoho Creator", "Client Script", "Widgets"],
+        "highlights": [
+            "Built custom modules for patient lifecycle management",
+            "Automated appointment reminders via SMS and email",
+            "HIPAA-compliant data handling workflows",
+            "Reduced patient follow-up time by 40%"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Custom Inventory Management App",
+        "description": "Zoho Creator application for a manufacturing client to track inventory, purchase orders, and vendor management.",
+        "category": "creator",
+        "industry": "Manufacturing",
+        "techStack": ["Zoho Creator", "Deluge", "Zoho Analytics", "Zoho Flow"],
+        "highlights": [
+            "Built multi-warehouse inventory tracking system",
+            "Automated reorder alerts based on stock thresholds",
+            "Custom dashboards for real-time inventory visibility",
+            "Integrated with Zoho Books for financial reconciliation"
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Zoho Books — Multi-Entity Accounting",
+        "description": "Configured Zoho Books for a logistics company with multiple entities, automating invoicing and expense tracking.",
+        "category": "books",
+        "industry": "Logistics",
+        "techStack": ["Zoho Books", "Zoho Expense", "API Integration", "Deluge"],
+        "highlights": [
+            "Set up multi-entity accounting with inter-company transactions",
+            "Automated recurring invoicing for 200+ clients",
+            "Integrated payment gateways for online collections",
+            "Custom financial reports for management review"
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Payment Gateway & ERP Integration",
+        "description": "Connected Zoho CRM with Razorpay and client's legacy ERP system for real-time payment tracking and order sync.",
+        "category": "integration",
+        "industry": "Finance",
+        "techStack": ["API Integration", "Zoho CRM", "Deluge", "Postman"],
+        "highlights": [
+            "Built REST API connectors for Razorpay payment webhooks",
+            "Real-time order status sync between ERP and Zoho CRM",
+            "Automated payment reconciliation reducing errors by 90%",
+            "Custom error handling and retry mechanisms"
+        ]
+    },
+    {
+        "id": "6",
+        "title": "Real Estate Lead Management System",
+        "description": "End-to-end Zoho CRM setup for a real estate firm to capture, nurture, and convert property leads.",
+        "category": "crm",
+        "industry": "Real Estate",
+        "techStack": ["Zoho CRM", "Zoho Campaigns", "Zoho Flow", "Client Script"],
+        "highlights": [
+            "Integrated with 99acres and MagicBricks for auto lead capture",
+            "Built property matching algorithm using Deluge",
+            "Automated drip campaigns for lead nurturing",
+            "Custom site-visit scheduling and tracking module"
+        ]
+    },
+    {
+        "id": "7",
+        "title": "Travel Agency Booking Automation",
+        "description": "Zoho Creator app for a travel agency to manage bookings, itineraries, and vendor coordination.",
+        "category": "creator",
+        "industry": "Travel",
+        "techStack": ["Zoho Creator", "Zoho CRM", "Deluge", "Zoho Mail"],
+        "highlights": [
+            "Custom booking management with itinerary builder",
+            "Automated vendor communication and confirmation workflows",
+            "Client portal for trip details and document access",
+            "Integrated with Zoho Books for invoicing"
+        ]
+    }
+]

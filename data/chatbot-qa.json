@@ -1,0 +1,86 @@
+[
+    {
+        "keywords": ["services", "offer", "provide", "do"],
+        "question": "What services do you offer?",
+        "answer": "I offer Zoho CRM setup & customization, API integrations, workflow automation with Deluge scripting, Zoho Creator app development, and user training & support.",
+        "quickReplies": ["What's your pricing?", "Years of experience?", "Industries served?"]
+    },
+    {
+        "keywords": ["experience", "years", "long", "working"],
+        "question": "How many years of experience do you have?",
+        "answer": "I have 4+ years of experience as a Zoho Developer, having worked with companies like Wisethink, EKI Energy Services, and CRM Masters Infotech across 40+ projects.",
+        "quickReplies": ["What services do you offer?", "Are you available?"]
+    },
+    {
+        "keywords": ["available", "freelance", "hire", "availability", "free"],
+        "question": "Are you available for freelance work?",
+        "answer": "Yes! I'm available for freelance Zoho development projects. I work with clients globally on CRM setup, integrations, and automation. Let's discuss your requirements!",
+        "quickReplies": ["What's your pricing?", "How to contact?"]
+    },
+    {
+        "keywords": ["price", "pricing", "cost", "charge", "rate", "fees"],
+        "question": "What are your rates?",
+        "answer": "My rates depend on project scope and complexity. I offer both hourly and project-based pricing. Please reach out via the Contact form for a custom quote.",
+        "quickReplies": ["What services do you offer?", "How to contact?"]
+    },
+    {
+        "keywords": ["contact", "reach", "email", "phone", "connect"],
+        "question": "How can I contact you?",
+        "answer": "You can reach me at diku.gupta269@gmail.com or call +91 6201475562. You can also use the Contact form on this website!",
+        "quickReplies": ["What services do you offer?", "Are you available?"]
+    },
+    {
+        "keywords": ["skills", "technologies", "tech", "know", "stack"],
+        "question": "What technologies do you work with?",
+        "answer": "I specialize in the Zoho ecosystem — CRM, Creator, Books, Analytics, Flow, and more. I'm proficient in Deluge scripting, API integrations, client scripts, widgets, and have basic knowledge of Python and Java.",
+        "quickReplies": ["What services do you offer?", "Years of experience?"]
+    },
+    {
+        "keywords": ["location", "based", "where", "city", "remote"],
+        "question": "Where are you based?",
+        "answer": "I'm based in Bangalore, Karnataka, India. I work with clients both locally and remotely across the globe.",
+        "quickReplies": ["Are you available?", "How to contact?"]
+    },
+    {
+        "keywords": ["crm", "zoho crm", "customer"],
+        "question": "Do you work with Zoho CRM?",
+        "answer": "Absolutely! Zoho CRM is my core expertise. I've implemented it for 300+ users, built custom modules, automated workflows, and integrated it with various third-party tools.",
+        "quickReplies": ["What about Zoho Creator?", "API integrations?"]
+    },
+    {
+        "keywords": ["creator", "app", "application", "custom app"],
+        "question": "Do you build Zoho Creator apps?",
+        "answer": "Yes! I build custom Zoho Creator applications for inventory management, booking systems, project tracking, and more — tailored to specific business needs.",
+        "quickReplies": ["What services do you offer?", "What's your pricing?"]
+    },
+    {
+        "keywords": ["api", "integration", "connect", "third-party", "external"],
+        "question": "Can you do API integrations?",
+        "answer": "Yes! I integrate Zoho with payment gateways (Razorpay, Stripe), ERPs, marketing tools, WhatsApp, and custom APIs using REST/webhooks and Deluge connections.",
+        "quickReplies": ["What services do you offer?", "Years of experience?"]
+    },
+    {
+        "keywords": ["industry", "industries", "sector", "clients", "domain"],
+        "question": "What industries have you worked with?",
+        "answer": "I've delivered solutions across Manufacturing, Finance, Healthcare, Logistics, Real Estate, Travel, Education, and IT sectors.",
+        "quickReplies": ["What services do you offer?", "Are you available?"]
+    },
+    {
+        "keywords": ["automation", "workflow", "automate", "blueprint"],
+        "question": "Can you automate my workflows?",
+        "answer": "Definitely! I automate lead assignment, follow-up sequences, approval processes, notifications, report generation, and more using Zoho workflows, blueprints, and Deluge scripts.",
+        "quickReplies": ["What's your pricing?", "How to contact?"]
+    },
+    {
+        "keywords": ["hello", "hi", "hey", "greetings"],
+        "question": "Hello!",
+        "answer": "Hi there! 👋 I'm Diksha's virtual assistant. How can I help you today? Ask me about services, experience, or availability!",
+        "quickReplies": ["What services do you offer?", "Years of experience?", "Are you available?"]
+    },
+    {
+        "keywords": ["thanks", "thank", "bye", "goodbye"],
+        "question": "Thanks!",
+        "answer": "You're welcome! Feel free to reach out anytime. You can also contact Diksha directly via the Contact section. Have a great day! 😊",
+        "quickReplies": ["How to contact?", "What services do you offer?"]
+    }
+]

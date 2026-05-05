@@ -1,0 +1,27 @@
+@media (max-width: 1024px) {
+    .connect-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-links {
+        position: fixed; top: 64px; right: -100%; width: 260px; height: calc(100vh - 64px);
+        background: var(--bg-primary); flex-direction: column; padding: 32px 24px;
+        border-left: 1px solid var(--border); transition: right 0.3s;
+    }
+    .nav-links.open { right: 0; }
+    .hero-name { font-size: 2.2rem; }
+    .hero-title { font-size: 1.2rem; }
+    .section { padding: 60px 0; }
+    .section-title { font-size: 1.6rem; }
+    .projects-grid, .services-grid, .cert-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .chatbot-window { width: calc(100% - 32px); right: 16px; bottom: 88px; height: 420px; }
+}
+
+@media (max-width: 480px) {
+    .hero-name { font-size: 1.8rem; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .skills-panel.active { grid-template-columns: 1fr; }
+}
