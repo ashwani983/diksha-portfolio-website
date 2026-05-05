@@ -43,19 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form validation
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', e => {
-        let valid = true;
-        form.querySelectorAll('[required]').forEach(input => {
-            const err = input.parentElement.querySelector('.form-error');
-            if (!input.value.trim()) { input.classList.add('border-red-400'); err.textContent = 'Required'; valid = false; }
-            else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) { input.classList.add('border-red-400'); err.textContent = 'Invalid email'; valid = false; }
-            else { input.classList.remove('border-red-400'); err.textContent = ''; }
-        });
-        if (!valid) e.preventDefault();
-    });
-
     // Testimonials
     fetch('data/testimonials.json').then(r => r.json()).then(data => {
         const c = document.getElementById('testimonial-carousel');
