@@ -1,5 +1,12 @@
 html { scroll-behavior: smooth; }
 
+/* Hero fade in */
+.hero-fade { opacity: 0; transform: translateY(20px); animation: fadeIn 0.8s ease forwards 0.2s; }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Scroll top button */
+#scroll-top.show { display: flex; }
+
 /* Animations */
 .animate-on-scroll { opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s; }
 .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
@@ -23,10 +30,6 @@ html { scroll-behavior: smooth; }
 /* Quick replies */
 .quick-reply-btn { padding: 3px 10px; border-radius: 12px; border: 1px solid #22d3ee; background: transparent; color: #22d3ee; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
 .quick-reply-btn:hover { background: #22d3ee; color: #000; }
-
-/* Testimonial */
-.testimonial-card { display: none; }
-.testimonial-card.active { display: block; }
 
 /* Stat counter suffix */
 .stat-number::after { content: '+'; }

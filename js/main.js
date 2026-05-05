@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburger.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
+    // Scroll to top
+    const scrollBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', () => {
+        scrollBtn.classList.toggle('show', window.scrollY > 400);
+    });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
     // Active nav
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -32,11 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     type();
 
-    // Testimonials
-    fetch('data/testimonials.json').then(r => r.json()).then(data => {
-        const c = document.getElementById('testimonial-carousel');
-        c.innerHTML = data.map((t, i) => `<div class="testimonial-card bg-dev-card border border-dev-border rounded-lg p-4${i === 0 ? ' active' : ''}"><p class="text-gray-400 text-sm italic mb-2">"${t.text}"</p><cite class="text-xs text-dev-accent font-semibold">— ${t.name}, ${t.company}</cite></div>`).join('');
-        let idx = 0;
-        setInterval(() => { const cards = c.querySelectorAll('.testimonial-card'); cards[idx].classList.remove('active'); idx = (idx + 1) % cards.length; cards[idx].classList.add('active'); }, 4000);
-    }).catch(() => {});
 });

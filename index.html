@@ -41,10 +41,9 @@
                 <li><a href="#skills" class="nav-link text-gray-400 hover:text-dev-accent transition">Skills</a></li>
                 <li><a href="#projects" class="nav-link text-gray-400 hover:text-dev-accent transition">Projects</a></li>
                 <li><a href="#freelance" class="nav-link text-gray-400 hover:text-dev-accent transition">Freelance</a></li>
-                <li><a href="#connect" class="nav-link text-gray-400 hover:text-dev-accent transition">Connect</a></li>
+                <li><a href="#freelance" class="nav-link text-gray-400 hover:text-dev-accent transition">Contact</a></li>
             </ul>
             <div class="flex items-center gap-3">
-                <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded hover:bg-dev-card transition"><i data-lucide="moon" class="w-5 h-5"></i></button>
                 <button id="hamburger" aria-label="Menu" class="md:hidden p-2"><i data-lucide="menu" class="w-5 h-5"></i></button>
             </div>
         </div>
@@ -56,7 +55,7 @@
                 <li><a href="#skills" class="mobile-link text-gray-400 hover:text-dev-accent">Skills</a></li>
                 <li><a href="#projects" class="mobile-link text-gray-400 hover:text-dev-accent">Projects</a></li>
                 <li><a href="#freelance" class="mobile-link text-gray-400 hover:text-dev-accent">Freelance</a></li>
-                <li><a href="#connect" class="mobile-link text-gray-400 hover:text-dev-accent">Connect</a></li>
+                <li><a href="#freelance" class="mobile-link text-gray-400 hover:text-dev-accent">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -65,7 +64,7 @@
 
         <!-- Hero -->
         <section class="min-h-screen flex items-center pt-14 relative" id="hero">
-            <div class="grid md:grid-cols-2 gap-8 items-center w-full">
+            <div class="grid md:grid-cols-2 gap-8 items-center w-full hero-fade">
                 <div class="text-left">
                     <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-dev-green/10 text-dev-green border border-dev-green/30 rounded-full px-3 py-1 mb-4"><span class="w-2 h-2 bg-dev-green rounded-full animate-pulse"></span>Available for Hire</span>
                     <p class="font-mono text-dev-green text-sm mb-2">// Hello, I'm</p>
@@ -76,7 +75,7 @@
                     <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-lg">Experienced Senior Zoho Developer with 4+ years delivering scalable CRM, Creator, and Books solutions across B2B/B2C clients in manufacturing, finance, logistics, healthcare, travel and real estate.</p>
                     <div class="flex gap-3 flex-wrap">
                         <a href="assets/resume/Sr.ZohoDeveloper-DikshaGupta..pdf" download class="inline-flex items-center gap-2 bg-dev-accent text-black px-5 py-2.5 rounded font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="download" class="w-4 h-4"></i>Resume</a>
-                        <a href="#connect" class="inline-flex items-center gap-2 border border-dev-accent text-dev-accent px-5 py-2.5 rounded font-semibold text-sm hover:bg-dev-accent/10 transition"><i data-lucide="send" class="w-4 h-4"></i>Contact Me</a>
+                        <a href="#freelance" class="inline-flex items-center gap-2 border border-dev-accent text-dev-accent px-5 py-2.5 rounded font-semibold text-sm hover:bg-dev-accent/10 transition"><i data-lucide="send" class="w-4 h-4"></i>Contact Me</a>
                     </div>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-dev-border">
                         <div class="text-center"><span class="stat-number text-xl font-bold text-dev-accent font-mono" data-count="300">0</span><span class="text-[10px] text-gray-500 block">Users</span></div>
@@ -92,6 +91,12 @@
             <a href="#experience" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hover:text-dev-accent transition"><i data-lucide="chevrons-down" class="w-6 h-6"></i></a>
         </section>
         <section class="py-16" id="experience">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-4"><i data-lucide="zap" class="w-6 h-6 text-dev-accent"></i>What I Do</h2>
+            <div class="grid sm:grid-cols-3 gap-4 mb-16">
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center"><i data-lucide="database" class="w-8 h-8 text-dev-accent mx-auto mb-2"></i><h3 class="text-sm font-semibold text-white">CRM Solutions</h3><p class="text-xs text-gray-400 mt-1">End-to-end Zoho CRM setup, customization & deployment</p></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center"><i data-lucide="plug" class="w-8 h-8 text-dev-green mx-auto mb-2"></i><h3 class="text-sm font-semibold text-white">API Integration</h3><p class="text-xs text-gray-400 mt-1">Connect Zoho with ERPs, payment gateways & external tools</p></div>
+                <div class="bg-dev-card border border-dev-border rounded-lg p-5 text-center"><i data-lucide="workflow" class="w-8 h-8 text-dev-purple mx-auto mb-2"></i><h3 class="text-sm font-semibold text-white">Automation</h3><p class="text-xs text-gray-400 mt-1">Deluge scripts, blueprints & scheduled workflows</p></div>
+            </div>
             <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-8"><i data-lucide="briefcase" class="w-6 h-6 text-dev-accent"></i>Experience</h2>
             <div class="space-y-6" id="experience-grid"></div>
         </section>
@@ -154,23 +159,22 @@
                     <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">✈️ Travel</span>
                 </div>
             </div>
-            <div id="testimonials">
-                <h3 class="text-sm font-semibold text-gray-300 mb-3">What Clients Say</h3>
-                <div id="testimonial-carousel" class="max-w-lg"></div>
             </div>
-        </section>
-
-        <!-- Connect -->
-        <section class="py-16" id="connect">
-            <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="mail" class="w-6 h-6 text-dev-accent"></i>Let's Connect</h2>
-            <p class="text-gray-400 text-sm mb-6">Interested in working together? Reach out directly.</p>
-            <div class="flex flex-wrap gap-4">
-                <a href="mailto:diku.gupta269@gmail.com" class="inline-flex items-center gap-2 bg-dev-accent text-black px-6 py-3 rounded-lg font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="mail" class="w-5 h-5"></i>Email Me</a>
-                <a href="https://www.linkedin.com/in/diksha-gupta-4609b6148/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#0077B5] text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-[#005f8f] transition"><i data-lucide="linkedin" class="w-5 h-5"></i>LinkedIn</a>
-                <a href="tel:+916201475562" class="inline-flex items-center gap-2 border border-dev-border text-gray-300 px-6 py-3 rounded-lg font-semibold text-sm hover:border-dev-accent hover:text-dev-accent transition"><i data-lucide="phone" class="w-5 h-5"></i>+91 6201475562</a>
+            <div class="mt-10 pt-8 border-t border-dev-border" id="connect">
+                <h3 class="flex items-center gap-2 text-lg font-bold text-white mb-4"><i data-lucide="mail" class="w-5 h-5 text-dev-accent"></i>Let's Connect</h3>
+                <p class="text-gray-400 text-sm mb-4">Interested in working together? Reach out directly.</p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="mailto:diku.gupta269@gmail.com" class="inline-flex items-center gap-2 bg-dev-accent text-black px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="mail" class="w-4 h-4"></i>Email Me</a>
+                    <a href="https://www.linkedin.com/in/diksha-gupta-4609b6148/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#0077B5] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#005f8f] transition"><i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn</a>
+                    <a href="https://wa.me/916201475562" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#1da851] transition"><i data-lucide="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+                    <a href="tel:+916201475562" class="inline-flex items-center gap-2 border border-dev-border text-gray-300 px-5 py-2.5 rounded-lg font-semibold text-sm hover:border-dev-accent hover:text-dev-accent transition"><i data-lucide="phone" class="w-4 h-4"></i>+91 6201475562</a>
+                </div>
             </div>
         </section>
     </main>
+
+    <!-- Scroll to top -->
+    <button id="scroll-top" class="fixed bottom-6 left-6 w-10 h-10 rounded-full bg-dev-card border border-dev-border text-gray-400 hover:text-dev-accent hover:border-dev-accent items-center justify-center z-50 transition hidden" aria-label="Scroll to top"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
 
     <!-- Footer -->
     <footer class="border-t border-dev-border text-center py-6 text-xs text-gray-500">
@@ -200,7 +204,6 @@
         </div>
     </div>
 
-    <script src="js/theme.js" defer></script>
     <script src="js/data-renderer.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/animations.js" defer></script>
