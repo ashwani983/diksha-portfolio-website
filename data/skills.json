@@ -1,0 +1,23 @@
+{
+    "zoho": [
+        { "name": "Zoho CRM", "level": 90, "icon": "users" },
+        { "name": "Zoho Creator", "level": 92, "icon": "blocks" },
+        { "name": "Zoho Books", "level": 85, "icon": "book-open" },
+        { "name": "Zoho Analytics", "level": 78, "icon": "bar-chart-3" },
+        { "name": "Zoho Flow", "level": 82, "icon": "workflow" },
+        { "name": "Zoho People/Payroll", "level": 75, "icon": "user-check" }
+    ],
+    "dev": [
+        { "name": "Deluge Scripting", "level": 95, "icon": "terminal" },
+        { "name": "API Integration", "level": 90, "icon": "plug" },
+        { "name": "Client Script", "level": 85, "icon": "file-code" },
+        { "name": "Widgets", "level": 80, "icon": "layout" },
+        { "name": "HTML & CSS", "level": 75, "icon": "code" },
+        { "name": "Python", "level": 55, "icon": "braces" }
+    ],
+    "tools": [
+        { "name": "Postman", "level": 85, "icon": "send" },
+        { "name": "Linux OS", "level": 70, "icon": "terminal" },
+        { "name": "Zoho Mail/Cliq", "level": 88, "icon": "message-square" }
+    ]
+}

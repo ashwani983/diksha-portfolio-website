@@ -1,0 +1,6 @@
+[
+    { "name": "Data Science", "issuer": "IBM", "icon": "brain-circuit", "color": "text-blue-400", "date": "" },
+    { "name": "Data Science", "issuer": "360DigiTMG", "icon": "bar-chart-3", "color": "text-dev-purple", "date": "" },
+    { "name": "Certificate in IT", "issuer": "Nalanda Open University", "icon": "monitor", "color": "text-dev-accent", "date": "Apr 2017" },
+    { "name": "Cyber Shiksha", "issuer": "Microsoft", "icon": "shield-check", "color": "text-dev-green", "date": "Apr 2019" }
+]

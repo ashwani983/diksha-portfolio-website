@@ -32,17 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     type();
 
-    // Skills tabs
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('bg-dev-accent', 'text-black'); b.classList.add('text-gray-400'); });
-            document.querySelectorAll('.skills-panel').forEach(p => { p.classList.add('hidden'); p.classList.remove('active'); });
-            btn.classList.add('bg-dev-accent', 'text-black'); btn.classList.remove('text-gray-400');
-            const panel = document.querySelector(`[data-panel="${btn.dataset.tab}"]`);
-            panel.classList.remove('hidden'); panel.classList.add('active');
-        });
-    });
-
     // Testimonials
     fetch('data/testimonials.json').then(r => r.json()).then(data => {
         const c = document.getElementById('testimonial-carousel');

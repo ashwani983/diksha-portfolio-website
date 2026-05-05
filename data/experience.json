@@ -1,0 +1,32 @@
+[
+    {
+        "date": "Dec 2024 — Present",
+        "role": "Sr. Zoho Developer",
+        "company": "Wisethink Information Solutions (Zoho Premium Partner)",
+        "points": [
+            "Led Zoho One implementation for 100+ users, optimizing operations and automating workflows",
+            "Integrated Zoho with external applications using APIs, streamlining lead capture",
+            "Provided user training, support, and ongoing system optimization"
+        ]
+    },
+    {
+        "date": "Feb 2024 — Dec 2024",
+        "role": "Sr. Zoho Developer",
+        "company": "EKI Energy Services Limited, Indore",
+        "points": [
+            "Led Zoho One implementation for 300+ users",
+            "Developed custom Zoho applications to address business needs",
+            "Integrated Zoho with third-party applications ensuring seamless data sync"
+        ]
+    },
+    {
+        "date": "Nov 2021 — Feb 2024",
+        "role": "Zoho Developer",
+        "company": "CRM Masters Infotech LLP, Gurgaon (Zoho Premium Partner)",
+        "points": [
+            "Implemented Zoho One across 30–40 projects in healthcare, education, and IT",
+            "Managed end-to-end project execution ensuring timely results",
+            "Provided post-implementation support and user training"
+        ]
+    }
+]
