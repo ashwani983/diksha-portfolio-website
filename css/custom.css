@@ -15,6 +15,10 @@ html { scroll-behavior: smooth; }
 .animate-on-scroll { opacity: 0; transform: translateY(12px); transition: opacity 0.5s, transform 0.5s; }
 .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
+/* Card hover glow */
+.hover\:border-dev-accent\/40:hover { box-shadow: 0 0 12px rgba(34, 211, 238, 0.1); }
+.project-card:hover, .skill-card:hover { box-shadow: 0 0 12px rgba(34, 211, 238, 0.08); }
+
 /* Skill bars */
 .skill-fill { width: 0; transition: width 0.8s ease; }
 
