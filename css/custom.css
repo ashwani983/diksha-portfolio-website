@@ -1,5 +1,9 @@
 html { scroll-behavior: smooth; }
 
+/* Hide scrollbar for filter tabs */
+.overflow-x-auto::-webkit-scrollbar { display: none; }
+.overflow-x-auto { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* Hero fade in */
 .hero-fade { opacity: 0; transform: translateY(20px); animation: fadeIn 0.8s ease forwards 0.2s; }
 @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }

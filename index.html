@@ -63,9 +63,9 @@
     <main id="main-content" class="max-w-6xl mx-auto px-4">
 
         <!-- Hero -->
-        <section class="min-h-screen flex items-center pt-14 relative" id="hero">
-            <div class="grid md:grid-cols-2 gap-8 items-center w-full hero-fade">
-                <div class="text-left">
+        <section class="min-h-[90vh] md:min-h-screen flex items-center pt-16 pb-8 relative" id="hero">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8 items-center w-full hero-fade">
+                <div class="text-left order-2 md:order-1">
                     <span class="inline-flex items-center gap-1.5 text-xs font-mono bg-dev-green/10 text-dev-green border border-dev-green/30 rounded-full px-3 py-1 mb-4"><span class="w-2 h-2 bg-dev-green rounded-full animate-pulse"></span>Available for Hire</span>
                     <p class="font-mono text-dev-green text-sm mb-2">// Hello, I'm</p>
                     <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Diksha Gupta</h1>
@@ -84,8 +84,8 @@
                         <div class="text-center"><span class="stat-number text-xl font-bold text-dev-accent font-mono" data-count="6">0</span><span class="text-[10px] text-gray-500 block">Industries</span></div>
                     </div>
                 </div>
-                <div class="flex justify-center md:justify-end">
-                    <img src="assets/images/1754032142287.jpeg" alt="Diksha Gupta" class="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-2 border-dev-accent/30 shadow-lg shadow-dev-accent/10">
+                <div class="flex justify-center md:justify-end order-1 md:order-2">
+                    <img src="assets/images/1754032142287.jpeg" alt="Diksha Gupta" class="w-40 h-40 md:w-80 md:h-80 rounded-2xl object-cover border-2 border-dev-accent/30 shadow-lg shadow-dev-accent/10">
                 </div>
             </div>
             <a href="#experience" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-500 hover:text-dev-accent transition"><i data-lucide="chevrons-down" class="w-6 h-6"></i></a>
@@ -108,12 +108,12 @@
         </section>
         <section class="py-16" id="projects">
             <h2 class="flex items-center gap-2 text-2xl font-bold text-white mb-6"><i data-lucide="folder-git-2" class="w-6 h-6 text-dev-accent"></i>Projects</h2>
-            <div class="flex gap-2 mb-6 flex-wrap" id="project-filters">
-                <button class="filter-btn active font-mono text-xs px-3 py-1.5 rounded border border-dev-border bg-dev-accent text-black" data-filter="all">All</button>
-                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="crm">CRM</button>
-                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="creator">Creator</button>
-                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="books">Books</button>
-                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400" data-filter="integration">Integration</button>
+            <div class="flex gap-2 mb-6 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap" id="project-filters">
+                <button class="filter-btn active font-mono text-xs px-3 py-1.5 rounded border border-dev-border bg-dev-accent text-black whitespace-nowrap" data-filter="all">All</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 whitespace-nowrap" data-filter="crm">CRM</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 whitespace-nowrap" data-filter="creator">Creator</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 whitespace-nowrap" data-filter="books">Books</button>
+                <button class="filter-btn font-mono text-xs px-3 py-1.5 rounded border border-dev-border text-gray-400 whitespace-nowrap" data-filter="integration">Integration</button>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4" id="projects-grid"></div>
         </section>
@@ -159,11 +159,10 @@
                     <span class="text-xs px-3 py-1 rounded-full border border-dev-border text-gray-400">✈️ Travel</span>
                 </div>
             </div>
-            </div>
             <div class="mt-10 pt-8 border-t border-dev-border" id="connect">
                 <h3 class="flex items-center gap-2 text-lg font-bold text-white mb-4"><i data-lucide="mail" class="w-5 h-5 text-dev-accent"></i>Let's Connect</h3>
                 <p class="text-gray-400 text-sm mb-4">Interested in working together? Reach out directly.</p>
-                <div class="flex flex-wrap gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <a href="mailto:diku.gupta269@gmail.com" class="inline-flex items-center gap-2 bg-dev-accent text-black px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-cyan-300 transition"><i data-lucide="mail" class="w-4 h-4"></i>Email Me</a>
                     <a href="https://www.linkedin.com/in/diksha-gupta-4609b6148/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#0077B5] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#005f8f] transition"><i data-lucide="linkedin" class="w-4 h-4"></i>LinkedIn</a>
                     <a href="https://wa.me/916201475562" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-[#1da851] transition"><i data-lucide="message-circle" class="w-4 h-4"></i>WhatsApp</a>
@@ -174,7 +173,7 @@
     </main>
 
     <!-- Scroll to top -->
-    <button id="scroll-top" class="fixed bottom-6 left-6 w-10 h-10 rounded-full bg-dev-card border border-dev-border text-gray-400 hover:text-dev-accent hover:border-dev-accent items-center justify-center z-50 transition hidden" aria-label="Scroll to top"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
+    <button id="scroll-top" class="fixed bottom-20 left-4 w-10 h-10 rounded-full bg-dev-card border border-dev-border text-gray-400 hover:text-dev-accent hover:border-dev-accent z-50 transition hidden items-center justify-center" aria-label="Scroll to top"><i data-lucide="arrow-up" class="w-5 h-5"></i></button>
 
     <!-- Footer -->
     <footer class="border-t border-dev-border text-center py-6 text-xs text-gray-500">
@@ -183,7 +182,7 @@
 
     <!-- Chatbot -->
     <div class="chatbot-fab fixed bottom-6 right-6 w-12 h-12 rounded-full bg-dev-accent text-black flex items-center justify-center cursor-pointer shadow-lg shadow-dev-accent/20 z-50 hover:scale-110 transition" id="chatbot-fab" aria-label="Open chat"><i data-lucide="message-circle" class="w-6 h-6"></i></div>
-    <div class="chatbot-window fixed bottom-20 right-6 w-80 h-[420px] bg-dev-bg border border-dev-border rounded-xl flex-col z-50 shadow-xl overflow-hidden" id="chatbot-window" role="dialog" aria-label="Chat with Diksha">
+    <div class="chatbot-window fixed bottom-20 right-3 left-3 sm:left-auto sm:right-6 sm:w-80 h-[70vh] sm:h-[420px] bg-dev-bg border border-dev-border rounded-xl flex-col z-50 shadow-xl overflow-hidden" id="chatbot-window" role="dialog" aria-label="Chat with Diksha">
         <div class="flex items-center justify-between px-4 py-3 bg-dev-card border-b border-dev-border">
             <span class="font-mono text-sm text-dev-accent">🤖 Ask Diksha</span>
             <button class="chatbot-close p-2 text-gray-400 hover:text-white" id="chatbot-close" aria-label="Close chat"><i data-lucide="x" class="w-5 h-5"></i></button>

@@ -2,8 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
-    hamburger.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    hamburger.addEventListener('click', (e) => { e.stopPropagation(); mobileMenu.classList.toggle('hidden'); });
     document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+    document.addEventListener('click', (e) => { if (!mobileMenu.contains(e.target) && e.target !== hamburger) mobileMenu.classList.add('hidden'); });
 
     // Scroll to top
     const scrollBtn = document.getElementById('scroll-top');
