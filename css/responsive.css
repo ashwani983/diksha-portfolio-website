@@ -16,7 +16,7 @@
     .section-title { font-size: 1.6rem; }
     .projects-grid, .services-grid, .cert-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .chatbot-window { width: calc(100% - 32px); right: 16px; bottom: 88px; height: 420px; }
+    .chatbot-window { width: calc(100% - 16px); right: 8px; left: 8px; bottom: 88px; height: 60vh; border-radius: 12px; }
 }
 
 @media (max-width: 480px) {

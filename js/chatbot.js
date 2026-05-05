@@ -7,17 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const messages = document.getElementById('chatbot-messages');
     const quickReplies = document.getElementById('chatbot-quick-replies');
     let qaData = [];
+    let isOpen = false;
 
     fetch('data/chatbot-qa.json').then(r => r.json()).then(data => { qaData = data; }).catch(() => {});
 
     fab.addEventListener('click', () => {
-        win.hidden = !win.hidden;
-        if (!win.hidden && messages.children.length === 0) {
+        isOpen = !isOpen;
+        win.hidden = !isOpen;
+        if (isOpen && messages.children.length === 0) {
             addMsg('bot', "Hi! 👋 I'm Diksha's assistant. Ask me about services, experience, or availability!");
             showQuickReplies(['What services do you offer?', 'Years of experience?', 'Are you available?']);
         }
+        if (isOpen) input.focus();
     });
-    closeBtn.addEventListener('click', () => win.hidden = true);
+
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isOpen = false;
+        win.hidden = true;
+    });
 
     sendBtn.addEventListener('click', send);
     input.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
@@ -27,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!text) return;
         addMsg('user', text);
         input.value = '';
+        quickReplies.innerHTML = '';
         const answer = findAnswer(text);
         setTimeout(() => {
             addMsg('bot', answer.text);

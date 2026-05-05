@@ -1,6 +1,6 @@
 // Theme toggle — runs first to prevent flash
 (function() {
-    const saved = localStorage.getItem('theme') || 'light';
+    const saved = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', saved);
 })();
 
